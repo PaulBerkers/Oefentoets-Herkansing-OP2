@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
@@ -30,12 +31,12 @@ namespace Oefentoets_Herkansing_OP2.Classes
             return tv.Success;
         }
 
-        public static async Task<List> GetVereniging()
+        public static async Task<List<Club>> GetVereniging()
         {
             Uri request = new Uri(@"https://api.summa.1ku.nl/clubs.php");
 
             HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("User -Agent", "Oefentoets Herkansing OP2");
+            client.DefaultRequestHeaders.Add("User-Agent", "Oefentoets Herkansing OP2");
             HttpResponseMessage respons = await client.GetAsync(request);
             if (respons.IsSuccessStatusCode == false)
             {

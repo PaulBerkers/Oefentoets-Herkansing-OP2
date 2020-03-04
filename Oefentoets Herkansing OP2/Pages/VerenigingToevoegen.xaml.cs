@@ -40,14 +40,19 @@ namespace Oefentoets_Herkansing_OP2.Pages
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-           Toevoegen = await Wrapper.AddNewVereniging(tbNaam.Text, tbType.Text, tbOmschrijving.Text);
+            Toevoegen = await Wrapper.AddNewVereniging(tbNaam.Text, tbType.Text, tbOmschrijving.Text);
             if (Toevoegen == true)
             {
-                MessageDialog md = new MessageDialog("De nieuwe vereniging is succesvol toegevoegd! (Naam: " + tbNaam.Text + "Type: " + tbType.Text + "Omschrijving: " + tbOmschrijving.Text);
+                MessageDialog md = new MessageDialog("De nieuwe vereniging is succesvol toegevoegd! (Naam: " + tbNaam.Text + ", " + "Type: " + tbType.Text + ", " + "Omschrijving: " + ", " + tbOmschrijving.Text);
                 await md.ShowAsync();
                 tbNaam.Text = "";
                 tbType.Text = "";
                 tbOmschrijving.Text = "";
+            }
+            else
+            {
+                MessageDialog md = new MessageDialog("Kan geen API aanroepen omdat je niet alle gegevens hebt ingevuld!");
+                await md.ShowAsync();
             }
         }
     }

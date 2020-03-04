@@ -120,7 +120,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\MenuItems.cs" />
-    <Compile Include="Classes\Toevoegen.cs" />
+    <Compile Include="Classes\Json.cs" />
     <Compile Include="Classes\Wrapper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

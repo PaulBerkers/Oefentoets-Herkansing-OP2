@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace Oefentoets_Herkansing_OP2.Classes
 {
+    public class Json
+    {
+
+    }
+
     public class Toevoegen
     {
         [JsonProperty("success")]
@@ -33,6 +38,6 @@ namespace Oefentoets_Herkansing_OP2.Classes
     {
 
         [JsonProperty("clubs")]
-        public IList<Club> Clubs { get; set; }
+        public List<Club> Clubs { get; set; }
     }
 }

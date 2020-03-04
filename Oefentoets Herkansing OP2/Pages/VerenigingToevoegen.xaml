@@ -14,11 +14,11 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbNaam" Header="Naam:" Foreground="Black"/>
-        <TextBox x:Name="tbType" Grid.Column="2" Header="Type:" />
+        <TextBox x:Name="tbNaam" Header="Naam:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbType" Grid.Column="2" Header="Type:" VerticalAlignment="Top" />
         <TextBox x:Name="tbOmschrijving" Grid.Row="1" Header="Beschrijving"/>
         <Button Grid.Column="2" Grid.Row="1" Content="Voeg toe" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
     </Grid>
